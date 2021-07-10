@@ -30,10 +30,6 @@ Things you may want to cover:
 ｜nickname                   |string  |null: false                  |
 ｜email                      |string  |null: false, unique: true    |
 ｜encrypted_password         |string  |null: false                  |
-｜last_name                  |string  |null: false                  |
-｜first_name                 |string  |null: false                  |
-｜last_name_kana             |string  |null: false                  |
-｜first_name_kana            |string  |null: false                  |
 
 ### Association
 
@@ -48,6 +44,13 @@ Things you may want to cover:
 ｜title                |string      |null: false        |
 ｜theme_id             |integer     |null: false        |
 ｜prefecture_id        |integer     |null: false        |
+｜mountain_name        |string      |                   |
+｜climbing_time_id     |integer     |                   |
+｜mountain_view_id     |integer     |                   |
+｜stamina_id           |integer     |                   |
+｜danger_id            |integer     |                   |
+
+
 
 ### Association
 
@@ -55,3 +58,7 @@ Things you may want to cover:
 - has_many   :comments
 - belongs_to_active_hash :theme
 - belongs_to_active_hash :prefecture
+- belongs_to_active_hash :climbing_time
+- belongs_to_active_hash :outlook
+- belongs_to_active_hash :stamina
+- belongs_to_active_hash :danger
