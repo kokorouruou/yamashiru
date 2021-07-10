@@ -22,3 +22,36 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+
+｜Column                     |Type    |Options                      |
+｜---------------------------|--------|-----------------------------|
+｜nickname                   |string  |null: false                  |
+｜email                      |string  |null: false, unique: true    |
+｜encrypted_password         |string  |null: false                  |
+｜last_name                  |string  |null: false                  |
+｜first_name                 |string  |null: false                  |
+｜last_name_kana             |string  |null: false                  |
+｜first_name_kana            |string  |null: false                  |
+
+### Association
+
+- has_many : tweets
+- has_many : comments
+
+
+## tweetsテーブル
+
+｜Column               |Type        |Options            |
+｜---------------------|------------|-------------------|
+｜title                |string      |null: false        |
+｜theme_id             |integer     |null: false        |
+｜prefecture_id        |integer     |null: false        |
+
+### Association
+
+- belongs_to :user
+- has_many   :comments
+- belongs_to_active_hash :theme
+- belongs_to_active_hash :prefecture
