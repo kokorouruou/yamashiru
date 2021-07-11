@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* TOP表紙 */
 a {
   text-decoration: #f8f8f8;
 }
@@ -33,3 +34,53 @@ a {
   font-size: 2.5vh;
   line-height: 40px;
 }
+/* // TOP表紙 */
+
+
+/* THEME一覧 */
+.theme-contents {
+  padding: 5vh 15vw;
+}
+
+.theme-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.theme-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.theme-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.list-pict {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.reason-list-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.reason-list-blue-text {
+  color: #3ccace;
+}
+
+.reason-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+/* //THEME一覧 */
