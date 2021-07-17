@@ -1,0 +1,37 @@
+<div class='title-contents'>
+    <h2 class='service-title'>
+      Get to know the mountains and enjoy them
+
+    </h2>
+    <p class='service-explain'>
+      「山を知り、山を楽しむ」非日常な体験を存分に楽しむためのアプリケーション
+    </p>
+
+<div class='theme-contents'>
+    <ul class='theme-lists'>
+      <li class='list'>
+      <%= link_to(tweets_path(@tweet, theme_id: 2), class: 'list-pict') do %>
+        <div class='list-pict-content'>
+        <%= image_tag "theme1.jpg", class:"list-pict" %>
+      <% end %>  
+      </li>
+      <li class='list'>
+      <%= link_to(tweets_path, class: 'list-pict') do %>
+        <div class='list-pict-content'>
+        <%= image_tag "theme2.jpg", class:"list-pict" %>
+      <% end %>
+      </li>
+      <li class='list'>
+      <%= link_to(tweets_path, class: 'list-pict') do %>
+        <div class='list-pict-content'>
+        <%= image_tag "theme3.jpg", class:"list-pict" %>
+      <% end %>
+      </li>
+      <li class='list'>
+      <%= link_to(tweets_path, class: 'list-pict') do %>
+        <div class='list-pict-content'>
+        <%= image_tag "theme4.jpg", class:"list-pict" %>
+      <% end %>
+      </li>
+    </ul>
+</div>

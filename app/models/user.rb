@@ -8,7 +8,9 @@ class User < ApplicationRecord
     validates :nickname
     validates :password, length: { minimum: 6 }, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }
   end
+
+  has_many :tweets
+  #has_many :comments
+
 end
 
-#has_many :tweets
-#has_many :comments

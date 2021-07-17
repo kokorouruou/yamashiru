@@ -44,7 +44,7 @@ Things you may want to cover:
 ｜title                |string      |null: false        |
 ｜theme_id             |integer     |null: false        |
 ｜prefecture_id        |integer     |null: false        |
-｜mountain_name        |string      |                   |
+｜mountain_name_id     |integer     |                   |
 ｜climbing_time_id     |integer     |                   |
 ｜mountain_view_id     |integer     |                   |
 ｜stamina_id           |integer     |                   |
@@ -58,6 +58,7 @@ Things you may want to cover:
 - has_many   :comments
 - belongs_to_active_hash :theme
 - belongs_to_active_hash :prefecture
+- belongs_to_active_hash :mountain_name
 - belongs_to_active_hash :climbing_time
 - belongs_to_active_hash :outlook
 - belongs_to_active_hash :stamina
