@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .furima-icon {
+  width: 5vw;
+  margin-right: 10vw;
+}

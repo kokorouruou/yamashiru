@@ -1,6 +1,6 @@
 class Theme < ActiveHash::Base
   self.data = [
-    { id: 1, name: 'テーマ' },
+    { id: 1, name: '---' },
     { id: 2, name: 'The Best Mountain ' },
     { id: 3, name: 'これが俺の山ごはん' },
     { id: 4, name: 'Mountain Wear' },

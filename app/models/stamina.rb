@@ -1,6 +1,6 @@
 class Stamina < ActiveHash::Base
   self.data = [
-    { id: 1, name: '体力度' },
+    { id: 1, name: '---' },
     { id: 2, name: '★' },
     { id: 3, name: '★★' },
     { id: 4, name: '★★★' }

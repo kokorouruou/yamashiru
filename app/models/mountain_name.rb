@@ -1,6 +1,6 @@
 class MountainName < ActiveHash::Base
   self.data = [
-    { id: 1, name: '登山した山' }, { id: 2, name: '富士山' }, { id: 3, name: '北岳' },
+    { id: 1, name: '---' }, { id: 2, name: '富士山' }, { id: 3, name: '北岳' },
     { id: 4, name: '奥穂高岳' }, { id: 5, name: '間ノ岳' }, { id: 6, name: '槍ヶ岳' },
     { id: 7, name: '荒川岳' }, { id: 8, name: '赤石岳' }, { id: 9, name: '御嶽山' },
     { id: 10, name: '塩見岳' }, { id: 11, name: '仙丈ヶ岳' }, { id: 12, name: '乗鞍岳' },
