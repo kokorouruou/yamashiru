@@ -2,16 +2,26 @@
   <div class="container">
     <h3>投稿する</h3>
     <%= form_with(model: @tweet, local: true) do |f| %>
+    <h2>1.写真</h2>
       <%= f.file_field :image, id:"tweet-image", placeholder: "Image Url" %>
+    <h2>2.写真のタイトルを記入ください</h2>
       <%= f.text_field :title, placeholder: "Title" %>
+    <h2>3.テーマを選択してください</h2>
       <%= f.collection_select(:theme_id, Theme.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>4.登山を開始した地域を選択してください</h2>
       <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>5.登山した山の情報を選択してください</h2>
       <%= f.collection_select(:mountain_name_id, MountainName.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>6.登山時間を選択してください</h2>
       <%= f.collection_select(:climbing_time_id, ClimbingTime.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>7.体力度を選択してください</h2>
       <%= f.collection_select(:stamina_id, Stamina.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>8.眺望度を選択してください</h2>
       <%= f.collection_select(:mountain_view_id, MountainView.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
+    <h2>9.危険度を選択してください</h2>
       <%= f.collection_select(:danger_id, Danger.all, :id, :name, {}, {class:"select-box", id:"tweet-prefecture"}) %>
 
+    <h2></h2>
       <%= f.submit "SEND" %>
     <% end %>
   </div>

@@ -84,3 +84,49 @@ a {
   margin-top: 20px;
 }
 /* //THEME一覧 */
+
+/* 投稿一覧 */
+.wrapper {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  max-width: 1400px;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  color: rgb(94, 94, 94);
+  margin: 1rem auto auto;
+}
+
+.tweet-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* //投稿一覧一覧 */
+
+/* 詳細ページ */
+
+.tweet-img-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.name{
+  font-size: 40px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tweet-box-img {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+/* //詳細ページ */
