@@ -111,6 +111,15 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 5vh 15vw;
+}
+
+.tweet-img-content>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
 }
 
 .name{
@@ -128,5 +137,33 @@ a {
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
 }
 /* //詳細ページ */
