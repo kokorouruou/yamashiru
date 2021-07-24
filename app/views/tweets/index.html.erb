@@ -1,6 +1,6 @@
 <div class='wrapper'>
 <% @tweets.each do |tweet| %>
     <%= link_to(tweet_path(tweet.id), class: 'tweet-img') do %>
-    <%= image_tag tweet.image, class: "tweet-img" %>
+    <%= image_tag tweet.image.variant(resize: '500x500'), class: "tweet-img" %>
 <% end %>
 <% end %>

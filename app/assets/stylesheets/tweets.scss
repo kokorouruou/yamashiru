@@ -40,15 +40,20 @@ a {
 /* THEME一覧 */
 .theme-contents {
   padding: 5vh 15vw;
-}
-
-.theme-contents>.title {
   text-align: center;
   font-size: 3.5vh;
   font-weight: bold;
   margin-bottom: 5vh;
   position: relative;
 }
+
+//.theme-contents>.title {
+  //text-align: center;
+  //font-size: 3.5vh;
+  //font-weight: bold;
+  //margin-bottom: 5vh;
+  //position: relative;
+//}
 
 .theme-lists {
   display: flex;
@@ -87,20 +92,25 @@ a {
 
 /* 投稿一覧 */
 .wrapper {
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 300;
-  max-width: 1400px;
-  padding-left: 5rem;
-  padding-right: 2rem;
-  color: rgb(94, 94, 94);
-  margin: 1rem auto auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  //display: block;
+  //font-size: 14px;
+  //line-height: 18px;
+  //font-weight: 300;
+  //max-width: 1400px;
+  //padding-left: 5rem;
+  //padding-right: 2rem;
+  //color: rgb(94, 94, 94);
+  //margin: 1rem auto auto;
 }
 
 .tweet-img {
-  margin-left: auto;
-  margin-right: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 /* //投稿一覧一覧 */
