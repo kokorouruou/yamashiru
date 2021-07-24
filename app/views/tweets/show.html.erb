@@ -1,14 +1,13 @@
     <h2 class="name">
       <%= @tweet.title %>
       </h2>
-
+  <div class= 'tweet-contents'>
   <div class="tweet-img-content">
   <%= image_tag @tweet.image ,class:"tweet-box-img" %>
-
-<p class='bestmountain-title'>
+  </div>
+    <div class='user-name'>
       <%= @tweet.user.nickname %>さんの登山情報
-
-    </p>
+    </div>
 
     <table>
     <tr>
@@ -27,3 +26,4 @@
     </tr>
     </table>
   </div>
+  

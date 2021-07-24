@@ -116,15 +116,8 @@ a {
 /* //投稿一覧一覧 */
 
 /* 詳細ページ */
-
-.tweet-img-content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.tweet-contents {
   padding: 5vh 15vw;
-}
-
-.tweet-img-content>.title {
   text-align: center;
   font-size: 3.5vh;
   font-weight: bold;
@@ -141,12 +134,31 @@ a {
   position: relative;
 }
 
+.tweet-img-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5vh 15vw;
+}
+
+.tweet-img-content>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
 .tweet-box-img {
   width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.user-name {
+  text-align: center;
 }
 
 table{
