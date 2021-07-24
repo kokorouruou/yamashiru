@@ -1,0 +1,20 @@
+// Place all the styles related to the baggages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.baggage-list {
+  width: 100vw;
+  height: 60vh;
+  background-image: image-url('sample1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  font-size: large;
+  //text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}

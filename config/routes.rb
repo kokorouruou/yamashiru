@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'themes#index'
   get 'tweets/search'
   resources :tweets, only: [:index, :new, :create, :show]
+
+  resources :baggages, only: [:index, :new]
 end
