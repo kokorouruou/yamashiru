@@ -1,9 +1,10 @@
 class TweetsController < ApplicationController
 
-  #before_action :search_tweet, only: [:index, :search]
+  before_action :search_tweet, only: [:index, :search]
 
   def index
     @tweets = Tweet.order("created_at DESC")
+    set_tweet_column
   end
 
   def new
@@ -23,18 +24,22 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
-  #def search
-    #@results = @p.result.includes(:tweet)
-  #end
+  def search
+    @results = @p.result.includes(@tweet)
+  end
 
   private
 
   def tweet_params
-    params.require(:tweet).permit(:title, :image, :theme_id, :prefecture_id, :mountain_name_id, :climbing_time_id, :mountain_view_id, :stamina_id, :danger_id).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:image, :title, :theme_id, :prefecture_id, :mountain_name_id, :climbing_time_id, :mountain_view_id, :stamina_id, :danger_id).merge(user_id: current_user.id)
   end
 
-  #def search_tweet
-    #@p = Tweet.ransack(params[:q])
-  #end
+  def search_tweet
+    @p = Tweet.ransack(params[:q])
+  end
+
+  def set_tweet_column
+    @tweet_name = Tweet.select("name").distinct  
+  end
 
 end

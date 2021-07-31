@@ -8,6 +8,10 @@
     </p>
 
 <div class='theme-contents'>
+<p class='bestmountain-title'>
+      テーマ投稿一覧
+
+    </p>
     <ul class='theme-lists'>
       <li class='list'>
       <%= link_to(tweets_path, class: 'list-pict') do %>
@@ -36,9 +40,20 @@
     </ul>
 
     <p class='bestmountain-title'>
-      Best Mountain
+      気になる山のレビューをチェックする
 
     </p>
+        <%= search_form_for @p, url: tweets_search_path do |f| %>
+        <%= f.collection_select :mountain_name_id_eq, MountainName.where.not(id:1), :id, :name,  include_blank: '選択して下さい' %>
+        <br>
+        <%= f.submit '検索' %>
+       <% end %>
+      </li>
+    <p class='bestmountain-title'>
+      YamaShiruおすすめの山情報
+
+    </p>
+
     <table>
   <tr>
     <th>山の情報</th>

@@ -10,6 +10,7 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.integer :stamina_id
       t.integer :danger_id
       t.references :user,                foreign_key: true
+      t.references :category, foreign_key: true
       t.timestamps
     end
   end

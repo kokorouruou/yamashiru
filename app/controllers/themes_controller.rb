@@ -1,11 +1,19 @@
 class ThemesController < ApplicationController
 
+  before_action :search_tweet, only: [:index]
+
+  
   def index
-    #@themes = Theme.all
+    @tweets = Tweet.all
   end
 
   def new
-    #@theme = Theme.new
   end
   
+
+  private
+
+  def search_tweet
+    @p = Tweet.ransack(params[:q])
+  end
 end

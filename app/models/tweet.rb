@@ -9,7 +9,6 @@ class Tweet < ApplicationRecord
   belongs_to :stamina
   belongs_to :danger
 
-
   has_one_attached :image
 
   validates :title, :image, presence: true
@@ -17,4 +16,5 @@ class Tweet < ApplicationRecord
   validates :theme_id
   validates :prefecture_id
   end
+  belongs_to :category, optional: true 
 end
