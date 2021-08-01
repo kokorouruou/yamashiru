@@ -3,7 +3,9 @@ class TweetsController < ApplicationController
   before_action :search_tweet, only: [:index, :search]
 
   def index
+    #@tweets = Tweet.where(theme_id: '1')
     @tweets = Tweet.order("created_at DESC")
+    @results = @p.result.includes(@tweet)
     set_tweet_column
   end
 

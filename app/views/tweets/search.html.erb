@@ -1,22 +1,50 @@
-<h1>
-  検索結果
-</h1>
+<div class='search-list'>
+<h3>検索結果</h3>
+      <br>同じ山でも時期や天候で大きく変化します。<br>
+          常に万全の準備で登山を楽しんでください。
+</div>
+
+<div class='search-contents'>
+<table>
+  <tr>
+    <th>山の情報</th>
+    <th>登山時間</th>
+    <th>眺望度</th>
+    <th>体力度</th>
+    <th>危険度</th>
+    <th>投稿日時</th>
+  </tr>
 <%# 検索結果の個数で条件分岐 %>
 <% if @results.length !=0 %>
   
   <% @results.each do |result| %>
-    <br>
-    <li>
+    <table>
+    <tr>
       <%#= result.@tweets.user %>
+      <th>
       <%= result.mountain_name.name %>
+      </th>
+      <th>
       <%= result.climbing_time.name %>
+      </th>
+      <th>
       <%= result.mountain_view.name %>
+      </th>
+      <th>
       <%= result.stamina.name %>
+      </th>
+      <th>
       <%= result.danger.name %>
-    </li>
+      </th>
+      <th>
+      <%= result.created_at %>
+      </th>
+    </tr>
+    </table>
   <% end %>
 <% else %>
   該当する商品はありません
 <% end %>
 <br>
 <%= link_to 'トップページへ戻る', root_path %>
+</div>

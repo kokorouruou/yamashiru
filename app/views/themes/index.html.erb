@@ -12,12 +12,18 @@
       テーマ投稿一覧
 
     </p>
+      <%= search_form_for @p, url: tweets_path do |f| %>
+        <%= f.collection_select :theme_id_eq, Theme.where.not(id:1), :id, :name,  include_blank: '選択して下さい' %>
+        <br>
+        <%= f.submit '検索' %>
+       <% end %>
     <ul class='theme-lists'>
       <li class='list'>
       <%= link_to(tweets_path, class: 'list-pict') do %>
         <div class='list-pict-content'>
         <%= image_tag "theme1.jpg", class:"list-pict" %>
-      <% end %>  
+      <% end %>
+      </a>  
       </li>
       <li class='list'>
       <%= link_to(tweets_path, class: 'list-pict') do %>

@@ -1,0 +1,25 @@
+.search-list {
+  width: 100vw;
+  height: 70vh;
+  background-image: image-url('sample.4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  font-size: 2.5ch;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.search-contents {
+  padding: 5vh 15vw;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  position: relative;
+}
