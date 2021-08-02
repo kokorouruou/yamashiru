@@ -5,73 +5,252 @@
           服装・持ち物を準備しておくことが大切です。
 </div>
 
-  <script src="baggage.js"></script>
-  <div class= 'baggage-item'>
-  <div class= 'baggage-item-p'>
-  <div class= 'required-item'>
-  <h2>必須アイテム</h2>
-  <div>
-    <input type="checkbox" id="baggage" name="baggage">
-    <label for="baggage">登山靴</label>
-  </div>
-  登山では舗装されていない道を歩くため、登山靴が必須。防水性のある靴がおすすめ。
-
-  <div>
-    <input type="checkbox" id="baggage" name="baggage">
-    <label for="baggage">リュック (ザック)</label>
-  </div>
-  さまざまな形・大きさがあります。最初に買うなら30Lのサイズがおすすめ。
-
-  <div>
-    <input type="checkbox" id="baggage" name="baggage">
-    <label for="baggage">レインウェア</label>
-  </div>
-  「防水性」に加えて、ウェア内のムレを外に逃がしてくれる「透湿性」のあるレインウェアがおすすめ。
-  </div>
-
-
-  <div class= 'clothes-item'>
-    <h2>服装</h2>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">アウター</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">ミドルレイヤー</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">ベースレイヤー</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">パンツ</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">靴下</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">手袋</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">帽子</label>
-  </div>
-
-
-  <div class= 'protect-yourself'>
-    <h2>身を守るアイテム</h2>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">ヘッドライト</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">登山地図・GPSアプリ</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">携帯電話・バッテリー</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">水分</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">行動食</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">非常食</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">健康保険証</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">ゴミ袋</label>
-  </div>
-
-
-  <div　class= 'convenient-item'>
-    <h2>便利なアイテム</h2>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">サングラス</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">トレッキングポール</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">日焼け止め</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">常備薬</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">筆記用具</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">携帯トイレ</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">トイレットペーパー</label>
-    <input type="checkbox" id="baggage" name="baggage"> <label for="baggage">虫除けスプレー</label>
-  </div>
-
-  <div class= 'button'>
-    <input type="button" value="保存" onclick="myCheck();"> 
-    <input type="reset" value="リセットする">
-  </div>
-  </div>
-  </div>
+<body>
+   <div id="myDivID">
+      <table>
+          <tr>
+            <th>今回の登山プラン</th>
+            <td>
+               <label><input type="text" name="item[]" value="富士山" data-savekey="32" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="日帰り" data-savekey="33" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="縦走" data-savekey="34" class="save-state1"></label><br />
+            </td>
+         </tr>
+          <tr>
+            <th>必須アイテム</th>
+            <td>
+               <label><input type="checkbox" name="item[]" value="1" data-savekey="1" class="save-state1">登山靴</label><br />登山では舗装されていない道を歩くため、登山靴が必須。防水性のある靴がおすすめ。<br />
+               
+               <label><input type="checkbox" name="item[]" value="2" data-savekey="2" class="save-state1">リュック (ザック)</label><br />さまざまな形・大きさがあります。最初に買うなら30Lのサイズがおすすめ。<br />
+               <label><input type="checkbox" name="item[]" value="3" data-savekey="3" class="save-state1">レインウェア</label><br />「防水性」に加えて、ウェア内のムレを外に逃がしてくれる「透湿性」のあるレインウェアがおすすめ。<br />
+            </td>
+         </tr>
+         <tr>
+            <th>服装</th>
+            <td>
+               <label><input type="checkbox" name="item[]" value="4" data-savekey="4" class="save-state1">アウター</label><br />
+               <label><input type="checkbox" name="item[]" value="5" data-savekey="5" class="save-state1">ミドルレイヤー</label><br />
+               <label><input type="checkbox" name="item[]" value="6" data-savekey="6" class="save-state1">ベースレイヤー</label><br />
+               <label><input type="checkbox" name="item[]" value="7" data-savekey="7" class="save-state1">パンツ</label><br />
+               <label><input type="checkbox" name="item[]" value="8" data-savekey="8" class="save-state1">靴下</label><br />
+               <label><input type="checkbox" name="item[]" value="9" data-savekey="9" class="save-state1">手袋</label><br />
+               <label><input type="checkbox" name="item[]" value="10" data-savekey="10" class="save-state1">帽子</label><br />
+            </td>
+         </tr>
+         <tr>
+            <th>身を守るアイテム</th>
+            <td>
+               <label><input type="checkbox" name="item[]" value="11" data-savekey="11" class="save-state1">ヘッドライト</label><br />
+               <label><input type="checkbox" name="item[]" value="12" data-savekey="12" class="save-state1">登山地図・GPSアプリ</label><br />
+               <label><input type="checkbox" name="item[]" value="13" data-savekey="13" class="save-state1">携帯電話・バッテリー</label><br />
+               <label><input type="checkbox" name="item[]" value="14" data-savekey="14" class="save-state1">水分</label><br />
+               <label><input type="checkbox" name="item[]" value="15" data-savekey="15" class="save-state1">行動食</label><br />
+               <label><input type="checkbox" name="item[]" value="16" data-savekey="16" class="save-state1">非常食</label><br />
+               <label><input type="checkbox" name="item[]" value="17" data-savekey="17" class="save-state1">健康保険証</label><br />
+               <label><input type="checkbox" name="item[]" value="18" data-savekey="18" class="save-state1">ゴミ袋</label><br />
+            </td>
+         </tr>
+         <tr>
+            <th>便利なアイテム</th>
+            <td>
+               <label><input type="checkbox" name="item[]" value="19" data-savekey="19" class="save-state1">サングラス</label><br />
+               <label><input type="checkbox" name="item[]" value="20" data-savekey="20" class="save-state1">トレッキングポール</label><br />
+               <label><input type="checkbox" name="item[]" value="21" data-savekey="21" class="save-state1">日焼け止め</label><br />
+               <label><input type="checkbox" name="item[]" value="22" data-savekey="22" class="save-state1">常備薬</label><br />
+               <label><input type="checkbox" name="item[]" value="23" data-savekey="23" class="save-state1">筆記用具</label><br />
+               <label><input type="checkbox" name="item[]" value="24" data-savekey="24" class="save-state1">携帯トイレ</label><br />
+               <label><input type="checkbox" name="item[]" value="25" data-savekey="25" class="save-state1">トイレットペーパー</label><br />
+               <label><input type="checkbox" name="item[]" value="26" data-savekey="26" class="save-state1">虫除けスプレー</label><br />
+            </td>
+         </tr>
+         <tr>
+            <th>その他に持っていきたいもの</th>
+            <td>
+               <label><input type="text" name="item[]" value="" data-savekey="27" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="" data-savekey="28" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="" data-savekey="29" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="" data-savekey="30" class="save-state1"></label><br />
+               <label><input type="text" name="item[]" value="" data-savekey="31" class="save-state1"></label><br />
+            </td>
+         </tr>
+         <tr>
+            <th>セレクト1</th>
+            <td>
+               <select name="name_select[]" data-savekey="1" class="save-state3">
+                  <option value="選択値１">選択項目１</option>
+                  <option value="選択値２">選択項目２</option>
+                  <option value="選択値３">選択項目３</option>
+                  <option value="選択値４">選択項目４</option>
+                  <option value="選択値５">選択項目５</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <th>セレクト2</th>
+            <td>
+               <select name="name_select[]" data-savekey="2" class="save-state3">
+                  <option value="選択値１１">選択項目１１</option>
+                  <option value="選択値１２">選択項目１２</option>
+                  <option value="選択値１３">選択項目１３</option>
+                  <option value="選択値１４">選択項目１４</option>
+                  <option value="選択値１５">選択項目１５</option>
+               </select>
+            </td>
+         </tr>
+      </table>
+      <div class= 'button'>
+      <input type="button" value="保存" id="button1_ID" />
+      </div>
+   </div>
+   <style>
+      #myDivID > table {
+         border-collapse: separate;
+         border: 1px solid gray;
+      }
+ 
+         #myDivID > table th, #myDivID > table td {
+            border: 1px solid gray;
+         }
+   </style>
+   <script>
+ 
+      document.getElementById('button1_ID').onclick = function () {
+         window.location.reload();
+      };
+ 
+      function alertDebug(arg) {
+         //alert(arg);   // ﾃﾞﾊﾞｯｸﾞ時に有効化すると良い
+      }
+ 
+      function save_restore1_checkbox(target_class) {
+         var cbstate;
+ 
+         window.addEventListener('load', function () {
+            cbstate = JSON.parse(localStorage['CBState'] || '{}');
+            alertDebug('cbstate = ' + JSON.stringify(cbstate));
+            for (var key in cbstate) { // cbstateはobjectで、このようにforﾙｰﾌﾟすると var key はobjectのｷｰが来るのだ。知らなんだ。
+               alertDebug('key=' + key);
+               var el_lst = document.querySelectorAll('input[data-savekey="' + key + '"].' + target_class);
+               set_checkbox_checked_all(el_lst, true);
+            }
+ 
+            var cb = document.getElementsByClassName(target_class);
+            alertDebug('cb = ' + JSON.stringify(cb));
+ 
+            for (var c = 0; c < cb.length; c++) {
+               alertDebug('cb[' + c + ']:name=' + cb[c].name + ', value=' + cb[c].value);
+ 
+               cb[c].addEventListener('click', function (evt) {
+                  var savekey = this.getAttribute('data-savekey');
+                  alertDebug('click:savekey_value=' + savekey + ', checked=' + this.checked);
+                  if (this.checked) {
+                     cbstate[savekey] = true;
+                  }
+                  else if (cbstate[savekey]) {
+                     delete cbstate[savekey];
+                  }
+                  localStorage['CBState'] = JSON.stringify(cbstate);
+               });
+            }
+         });
+ 
+         function set_checkbox_checked_all(el_lst, checked) {
+            for (var c = 0; c < el_lst.length; c++) {
+               var el = el_lst[c];
+               alertDebug('el=' + JSON.stringify(el) + ' ,el.name=' + el.name);
+               if (el) {
+                  alertDebug('el.checked=' + el.checked);
+                  el.checked = checked;
+               }
+            }
+         }
+      }
+      save_restore1_checkbox('save-state1');
+      function save_restore2_inputtext(target_class) {
+         var tbstate;
+ 
+         window.addEventListener('load', function () {
+            tbstate = JSON.parse(localStorage['TBState'] || '{}');
+            alertDebug('tbstate = ' + JSON.stringify(tbstate));
+            for (var key in tbstate) {
+               var value = tbstate[key];
+               alertDebug('key=' + key + ' ,value=' + value);
+               var el_lst = document.querySelectorAll('input[data-savekey="' + key + '"].' + target_class);
+               set_textbox_string_all(el_lst, value);
+            }
+            var tb = document.getElementsByClassName(target_class); //'save-state2');
+            alertDebug('tb = ' + JSON.stringify(tb));
+            for (var c = 0; c < tb.length; c++) {
+               alertDebug('tb[' + c + ']:name=' + tb[c].name + ', value=' + tb[c].value);
+               tb[c].addEventListener('input', function (evt) {
+                  alertDebug('input:value=' + this.value);
+                  var savekey = this.getAttribute('data-savekey');
+                  tbstate[savekey] = this.value;
+                  localStorage['TBState'] = JSON.stringify(tbstate);
+               });
+            }
+         });
+ 
+         function set_textbox_string_all(el_lst, value) {
+ 
+            for (var c = 0; c < el_lst.length; c++) {
+               var el = el_lst[c];
+               //alertDebug('el=' + JSON.stringify(el) + ' ,el.name=' + el.name);
+               if (el) {
+                  //alertDebug('el.checked=' + el.checked);
+                  el.value = value;
+               }
+            }
+         }
+      }
+      save_restore2_inputtext('save-state2');
+      function save_restore3_select(target_class) {
+         var ddstate;
+ 
+         window.addEventListener('load', function () {
+            ddstate = JSON.parse(localStorage['DDState'] || '{}');
+            alertDebug('ddstate = ' + JSON.stringify(ddstate));
+            for (var key in ddstate) {
+               var value = ddstate[key]; // =selectindex値
+               alertDebug('key=' + key + ' ,value=' + value);
+               var el_lst = document.querySelectorAll('select[data-savekey="' + key + '"].' + target_class);
+               set_select_selectindex_all(el_lst, value);
+            }
+ 
+            var dd = document.getElementsByClassName(target_class);
+            alertDebug('dd = ' + JSON.stringify(dd));
+ 
+            for (var c = 0; c < dd.length; c++) {
+               alertDebug('dd[' + c + ']:name=' + dd[c].name + ', value=' + dd[c].value);
+               dd[c].addEventListener('change', function (evt) {
+                  alertDebug('input:value=' + this.value);
+                  var savekey = this.getAttribute('data-savekey');
+                  var selectElement = evt.target;
+                  var selectindex = selectElement.selectedIndex;
+                  alertDebug('selectindex=' + selectindex);
+                  ddstate[savekey] = selectindex;
+                  localStorage['DDState'] = JSON.stringify(ddstate);
+               });
+            }
+         });
+ 
+         function set_select_selectindex_all(el_lst, selectindex) {
+ 
+            for (var c = 0; c < el_lst.length; c++) {
+               var el = el_lst[c];
+               //alertDebug('el=' + JSON.stringify(el) + ' ,el.name=' + el.name);
+               if (el) {
+                  //alertDebug('el.checked=' + el.checked);
+                  el.selectedIndex = selectindex;
+               }
+            }
+         }
+      }
+      save_restore3_select('save-state3');
+ 
+   </script>
+ 
+</body>
+</html>
 
 
