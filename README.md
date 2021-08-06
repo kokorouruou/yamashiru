@@ -1,3 +1,7 @@
+# YamaShiru
+![instagram_profile_image](https://user-images.githubusercontent.com/80765628/128457207-09b44895-2895-4bec-9ced-b633635178d9.png)
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
