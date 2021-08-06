@@ -1,6 +1,17 @@
 # YamaShiru
-![instagram_profile_image](https://user-images.githubusercontent.com/80765628/128457207-09b44895-2895-4bec-9ced-b633635178d9.png)
+![yamashiru logo](https://user-images.githubusercontent.com/80765628/128458183-ff07682f-784d-4a19-9b05-fb2bd9b0d0ff.png)
 
+# 概要
+YamaShiruは日常では味わえない楽しさ、素晴らしさを体験することが出来る登山、トレッキングの様子を
+ユーザー同士が共有する画像投稿アプリケーションです。またそれ以外にも山の情報や登山前の荷物準備など
+「登山する前に知りたかった」という機能も加えることでアウトドア特有の危険・リスクを未然に防止し、充実した
+時間を過ごして頂くことを目的としています。
+
+# App URL
+https://yamashiru.herokuapp.com/
+
+# Yamashiruのポジショニング
+![yamashiru position](https://user-images.githubusercontent.com/80765628/128459792-99b39dd1-ea23-4435-bbb7-27e48c7b494f.png)
 
 # README
 
