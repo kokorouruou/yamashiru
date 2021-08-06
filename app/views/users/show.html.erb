@@ -1,0 +1,6 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+    <%= image_tag tweet.image.variant(resize: '2000x1000'), class: "tweet-img" %>
+  <% end %>
+</div>

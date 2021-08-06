@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
 
   resources :baggages, only: [:index, :new]
+  resources :users, only: :show
 end
