@@ -5,7 +5,7 @@
           服装・持ち物を準備しておくことが大切です。
 </div>
 
-<% if user_signed_in? && current_user.id.to_s == params[:id] %>
+<%# if user_signed_in? && current_user.id.to_s == params[:id] %>
 
 <body>
    <div id="myDivID">
@@ -255,9 +255,9 @@
 </body>
 </html>
 
-  <% else%>
-  <%= link_to "ログインしてください", new_user_session_path, class: "post" %>
-  <% end %>
+  <%# else%>
+  <%#= link_to "ログインしてください", new_user_session_path, class: "post" %>
+  <%# end %>
 
 
 

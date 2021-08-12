@@ -15,6 +15,7 @@ class Tweet < ApplicationRecord
   with_options numericality: { other_than: 1, message: "can't be blank"} do
   validates :theme_id
   validates :prefecture_id
+  validates :mountain_name_id
   end
   belongs_to :category, optional: true 
 end

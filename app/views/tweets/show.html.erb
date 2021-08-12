@@ -1,8 +1,13 @@
-    <h2 class="name">
-      <%= @tweet.title %>
-      </h2>
+<h2 class="name">
+  <%= @tweet.title %>
+</h2>
+
   <div class= 'tweet-contents'>
   <div class="tweet-img-content">
+  <% if user_signed_in? && current_user.id == @tweet.user_id%>
+    <%= link_to "編集する", edit_tweet_path(@tweet.id), class: :tweet__btn %>
+    <%= link_to "削除する", tweet_path(@tweet.id), method: :delete, class: :tweet__btn %>
+  <% end %>
   <%= image_tag @tweet.image ,class:"tweet-box-img" %>
   </div>
     <div class='user-name'>

@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-
+  before_action :set_tweet, only: [:edit, :show]
   before_action :search_tweet, only: [:index, :search]
 
   def index
@@ -23,12 +23,31 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
   end
 
   def search
     @results = @p.result.includes(@tweet)
   end
+
+  def edit
+  end
+
+  def update
+    @tweet = Tweet.find(params[:id])
+    @tweet.update(tweet_params)
+    if @tweet.save
+      redirect_to tweet_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    tweet = Tweet.find(params[:id])
+    tweet.destroy
+    redirect_to root_path
+  end
+
 
   private
 
@@ -42,6 +61,10 @@ class TweetsController < ApplicationController
 
   def set_tweet_column
     @tweet_name = Tweet.select("name").distinct  
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 
 end

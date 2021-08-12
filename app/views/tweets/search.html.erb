@@ -7,7 +7,7 @@
 <div class='search-contents'>
 <table>
   <tr>
-    <th>山の情報</th>
+    <th>投稿者名</th>
     <th>登山時間</th>
     <th>眺望度</th>
     <th>体力度</th>
@@ -20,9 +20,8 @@
   <% @results.each do |result| %>
     <table>
     <tr>
-      <%#= result.@tweets.user %>
       <th>
-      <%= result.mountain_name.name %>
+      <%= result.user.nickname %>
       </th>
       <th>
       <%= result.climbing_time.name %>
@@ -37,7 +36,7 @@
       <%= result.danger.name %>
       </th>
       <th>
-      <%= result.created_at %>
+      <%= result.created_at.strftime('%Y/%m/%d') %>
       </th>
     </tr>
     </table>
