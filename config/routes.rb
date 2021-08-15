@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'tweets/search'
   resources :tweets do
     resources :themes, only: [:index]
+    resources :comments, only: :create
   end
 
   resources :baggages, only: [:index, :new]

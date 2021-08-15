@@ -30,5 +30,35 @@
       <td> <%= @tweet.danger.name %> </td>
     </tr>
     </table>
+    <div class="prototype__comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+        <% if user_signed_in? %>
+          <%= form_with model: [@tweet, @comment], local: true do |f|%>
+            <div class="field">
+              <%= f.label :text, "コメント一覧" %><br />
+              <%= f.text_field :text, id:"comment_text" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <% end %> 
+        <% else %>
+        <% end %>
+        <%# // ログインしているユーザーには上記を表示する %>
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+          <% if @comments %>
+              <% @comments.each do |comment| %>
+            <li class="comments_list">
+             
+              <%= comment.text %>
+              <%= comment.created_at.strftime('%Y/%m/%d') %>
+              <%#= link_to comment.user.name , user_path(comment.user.id), class: :comment_user %>
+              <% end %>
+             <% end %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+      </div>
   </div>
   

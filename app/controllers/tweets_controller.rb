@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show, :update]
   before_action :search_tweet, only: [:index, :search]
 
   def index
@@ -23,6 +23,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   def search
@@ -33,7 +35,6 @@ class TweetsController < ApplicationController
   end
 
   def update
-    @tweet = Tweet.find(params[:id])
     @tweet.update(tweet_params)
     if @tweet.save
       redirect_to tweet_path

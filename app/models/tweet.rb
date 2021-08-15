@@ -9,6 +9,8 @@ class Tweet < ApplicationRecord
   belongs_to :stamina
   belongs_to :danger
 
+  has_many :comments, dependent: :destroy
+
   has_one_attached :image
 
   validates :title, :image, presence: true

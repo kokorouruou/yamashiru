@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   has_many :tweets
   has_many :baggages
-  #has_many :comments
+  has_many :comments
 
 end
 
