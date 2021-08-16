@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_tweet, only: [:edit, :show, :update]
   before_action :search_tweet, only: [:index, :search]
-  before_action :move_to_index, except: [:index, :show, :new, :create]
+  before_action :move_to_index, except: [:index, :show, :new, :create, :search]
 
   def index
     #@tweets = Tweet.where(theme_id: '1')
