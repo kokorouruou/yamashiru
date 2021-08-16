@@ -1,6 +1,8 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_tweet, only: [:edit, :show, :update]
   before_action :search_tweet, only: [:index, :search]
+  before_action :move_to_index, except: [:index, :show, :new, :create]
 
   def index
     #@tweets = Tweet.where(theme_id: '1')
@@ -67,5 +69,13 @@ class TweetsController < ApplicationController
   def set_tweet
     @tweet = Tweet.find(params[:id])
   end
+
+  def move_to_index
+    @tweet = Tweet.find(params[:id])
+    unless user_signed_in? && current_user.id == @tweet.user_id
+      redirect_to action: :index
+  end
+
+ end
 
 end
